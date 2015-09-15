@@ -4,12 +4,20 @@
             <th></th>
             <th>Artist</th>
             <th>Title</th>
+            <th>Link</th>
         </tr>
         {{#each tracks as |track|}}
             <tr>
                 <td><img src="{{track.image}}"/></td>
                 <td>{{track.author}}</td>
                 <td>{{track.title}}</td>
+                <td>
+                    {{#if track.url}}
+                        <a href="{{track.url}}" target="_blank">{{track.url}}</a>
+                    {{else}}
+                        Sorry, SoundCloud!
+                    {{/if}}
+                </td>
             </tr>
         {{/each}}
     </table>

@@ -44,6 +44,7 @@
     "ember-moment": "3.6.4",
     "ember-resolver": "^2.0.2",
     "ember-responsive": "1.1.1",
-    "ember-suave": "1.1.0"
+    "ember-suave": "1.1.0",
+    "ember-truth-helpers": "1.1.0"
   }
 }
