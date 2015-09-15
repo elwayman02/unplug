@@ -15,7 +15,7 @@
                     {{#if track.url}}
                         <a href="{{track.url}}" target="_blank">{{track.url}}</a>
                     {{else}}
-                        Sorry, SoundCloud!
+                        {{#link-to 'soundcloud' track.cid}}View SoundCloud URL{{/link-to}}
                     {{/if}}
                 </td>
             </tr>

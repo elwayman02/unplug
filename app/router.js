@@ -6,8 +6,9 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function () {
-    this.route('index', { path: '/' });
-    this.route('playlist', { path: '/playlist/:id' });
+  this.route('index', { path: '/' });
+  this.route('playlist', { path: '/playlist/:id' });
+  this.route('soundcloud', { path: '/soundcloud/:id' });
 });
 
 export default Router;
