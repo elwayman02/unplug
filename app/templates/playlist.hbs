@@ -11,8 +11,8 @@
             <span>{{track.author}}</span>
             <span>{{track.title}}</span>
             <span>
-                {{#if track.url}}
-                    <a href="{{track.url}}" target="_blank"><button>Listen</button></a>
+                {{#if (eq track.format 1)}}
+                    {{#link-to 'youtube' track.cid}}<button>Listen</button>{{/link-to}}
                 {{else}}
                     {{#link-to 'soundcloud' track.cid}}<button>Listen</button>{{/link-to}}
                 {{/if}}

@@ -1,5 +1,7 @@
 <h2>Choose A Playlist</h2>
 
-{{#each playlists as |playlist|}}
-    <div {{action 'select' playlist.id}}>{{playlist.name}}</div>
-{{/each}}
+<div class="playlist-list">
+    {{#each playlists as |playlist|}}
+        <button {{action 'select' playlist.id}}>{{playlist.name}}</button>
+    {{/each}}
+</div>

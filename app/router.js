@@ -9,6 +9,7 @@ Router.map(function () {
   this.route('index', { path: '/' });
   this.route('playlist', { path: '/playlist/:id' });
   this.route('soundcloud', { path: '/soundcloud/:id' });
+  this.route('youtube', { path: '/youtube/:id' });
 });
 
 export default Router;
