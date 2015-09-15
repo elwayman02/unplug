@@ -1,24 +1,22 @@
 <div class="playlist">
-    <table>
-        <tr>
-            <th></th>
-            <th>Artist</th>
-            <th>Title</th>
-            <th>Link</th>
-        </tr>
-        {{#each tracks as |track|}}
-            <tr>
-                <td><img src="{{track.image}}"/></td>
-                <td>{{track.author}}</td>
-                <td>{{track.title}}</td>
-                <td>
-                    {{#if track.url}}
-                        <a href="{{track.url}}" target="_blank">{{track.url}}</a>
-                    {{else}}
-                        {{#link-to 'soundcloud' track.cid}}View SoundCloud URL{{/link-to}}
-                    {{/if}}
-                </td>
-            </tr>
-        {{/each}}
-    </table>
+    <div class="playlist-header">
+        <span>Track Image</span>
+        <span>Artist</span>
+        <span>Title</span>
+        <span>Link</span>
+    </div>
+    {{#each tracks as |track|}}
+        <div class="playlist-row">
+            <span class="track-img"><img src="{{track.image}}"/></span>
+            <span>{{track.author}}</span>
+            <span>{{track.title}}</span>
+            <span>
+                {{#if track.url}}
+                    <a href="{{track.url}}" target="_blank"><button>Listen</button></a>
+                {{else}}
+                    {{#link-to 'soundcloud' track.cid}}<button>Listen</button>{{/link-to}}
+                {{/if}}
+            </span>
+        </div>
+    {{/each}}
 </div>
