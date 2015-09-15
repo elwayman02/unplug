@@ -1,0 +1,5 @@
+<h2>Choose A Playlist</h2>
+
+{{#each model as |playlist|}}
+    <div {{action 'select' playlist.id}}>{{playlist.name}}</div>
+{{/each}}
