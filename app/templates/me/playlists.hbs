@@ -1,0 +1,16 @@
+<div class="playlistContainer">
+    <div class="playlistHeader">
+        <span>Playlist</span>
+        <span># of Tracks</span>
+    </div>
+    {{#each model as |playlist|}}
+        <div class="playlistRow">
+            <span>
+                {{#link-to 'me.playlist' playlist.id}}
+                    {{playlist.name}}
+                {{/link-to}}
+            </span>
+            <span>{{playlist.count}}</span>
+        </div>
+    {{/each}}
+</div>

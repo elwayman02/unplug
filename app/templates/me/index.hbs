@@ -1,0 +1,13 @@
+<p>Step 1: Login to Plug.dj</p>
+<p>Step 2: <a href="https://plug.dj/_/playlists" target="_blank">Click this link</a> to obtain your playlist data from the Plug API</p>
+<p>Step 3: Click "Raw" (instead of "Parsed", if given these options) and copy the content of that link into the text box below, then click the "Submit Playlists" button</p>
+
+<button {{action 'submit' playlists}}>Submit Playlists</button>
+
+{{content-editable
+class='playlistInput'
+placeholder='Paste Playlist JSON Here'
+type='text'
+value=playlists}}
+
+<button {{action 'submit' playlists}}>Submit Playlists</button>
