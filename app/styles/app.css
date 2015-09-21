@@ -59,3 +59,39 @@ h1 {
     text-align: right;
     margin-right: 1em;
 }
+
+/* me.hbs */
+.meContainer {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+/* me/index.hbs */
+.playlistInput,
+.trackInput {
+    border: 1px solid #666;
+    border-radius: 0.3em;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    max-width: 1200px;
+    min-height: 400px;
+    min-width: 400px;
+    width: 75%;
+}
+
+/* me/playlists.hbs */
+.playlistContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.playlistContainer span {
+    display: inline-block;
+    width: 200px;
+}
+
+.playlistHeader span {
+    font-weight: bold;
+}

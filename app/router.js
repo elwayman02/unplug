@@ -10,6 +10,14 @@ Router.map(function () {
   this.route('playlist', { path: '/playlist/:id' });
   this.route('soundcloud', { path: '/soundcloud/:id' });
   this.route('youtube', { path: '/youtube/:id' });
+  this.route('me', { path: '/me' }, function () {
+    this.route('index', { path: '/' });
+    this.route('playlists');
+    this.route('playlist', { path: '/playlist/:playlist_id' }, function () {
+        this.route('index', { path: '/' });
+        this.route('tracks');
+    });
+  });
 });
 
 export default Router;
