@@ -15,8 +15,8 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
-* change into the new directory
+* `git clone git@github.com:elwayman02/unplug.git`
+* `cd unplug`
 * `npm install -g ember-cli`
 * `npm install`
 * `bower install`
