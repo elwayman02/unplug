@@ -5,6 +5,7 @@ export default Ember.Route.extend({
     playlists: Playlists.create(),
 
     model(params) {
-        return this.modelFor('me.playlist');
+        const playlists = this.get('playlists');
+        return JSON.parse(playlists.storage()[playlists.storageKey]).findBy('id', this.modelFor('me.playlist').id);
     }
 });

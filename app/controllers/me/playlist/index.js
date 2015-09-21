@@ -8,8 +8,10 @@ export default Ember.Controller.extend({
         submit(tracks) {
             const id = this.get('model.id');
             const playlists = this.get('playlists');
-            playlists.findBy('id', id).tracks = JSON.parse(tracks).data;
-            this.set('playlists', playlists);
+            const playlist = playlists.findBy('id', id);
+            playlist.tracks = JSON.parse(tracks).data;
+            this.get('playlists').replace(playlists.indexOf(playlist), 1, playlist);
+            this.get('playlists').save();
             this.transitionToRoute('me.playlist.tracks', id);
         }
     }
