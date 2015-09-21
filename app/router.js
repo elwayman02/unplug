@@ -14,8 +14,9 @@ Router.map(function () {
     this.route('index', { path: '/' });
     this.route('playlists');
     this.route('playlist', { path: '/playlist/:playlist_id' }, function () {
-        this.route('index', { path: '/' });
-        this.route('tracks');
+      this.route('index', { path: '/' });
+      this.route('tracks');
+      this.route('raw');
     });
   });
 });
