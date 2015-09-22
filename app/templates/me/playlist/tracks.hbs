@@ -11,11 +11,11 @@
         <span>Title</span>
         <span>Link</span>
     </div>
-    {{#each model.tracks as |track|}}
+    {{#each tracks as |track|}}
         <div class="playlist-row">
             <span class="track-img"><img src="{{track.image}}"/></span>
             <span>{{track.author}}</span>
-            <span>{{track.title}}</span>
+            <span><a href="{{track.url}}" target="_blank">{{track.title}}</a></span>
             <span>
                 {{#if (eq track.format 1)}}
                     {{#link-to 'youtube' track.cid}}<button>Listen</button>{{/link-to}}
