@@ -1,9 +1,9 @@
 import Ember from 'ember';
-import LinkExtractor from 'unplug/utils/link-extractor';
 
 export default Ember.Controller.extend({
     trackList: Ember.computed.map('model.tracks', function (track) {
-        return `${track.author} - ${track.title} - ${LinkExtractor.getLink(track)}`;
+        const url = track.url ? ` - ${track.url}` : '';
+        return `${track.author} - ${track.title}${url}`;
     }),
 
     tracks: Ember.computed('trackList', function () {
