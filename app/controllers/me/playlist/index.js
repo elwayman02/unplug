@@ -3,6 +3,7 @@ import Playlists from 'unplug/models/playlists';
 import LinkExtractor from 'unplug/utils/link-extractor';
 
 export default Ember.Controller.extend({
+    tracks: '',
     playlists: Playlists.create(),
 
     buildPromise(track) {
@@ -41,6 +42,7 @@ export default Ember.Controller.extend({
             this.get('playlists').replace(playlists.indexOf(playlist), 1, playlist);
             this.get('playlists').save();
             this.transitionToRoute('me.playlist.tracks', id);
+            this.set('tracks', '');
         });
     },
 
