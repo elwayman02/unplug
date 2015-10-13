@@ -3,15 +3,17 @@
         View Raw Playlist
     {{/link-to}}
     to copy it for your own files!
+
+
 </p>
 <div class="playlist">
     <div class="playlist-header">
         <span>Track Image</span>
-        <span>Artist</span>
-        <span>Title</span>
+        <span {{action 'sortByArtist'}}>Artist</span>
+        <span {{action 'sortByTitle'}}>Title</span>
         <span>Link</span>
     </div>
-    {{#each model.tracks as |track|}}
+    {{#each tracks as |track|}}
         <div class="playlist-row">
             <span class="track-img"><img src="{{track.image}}"/></span>
             <span>{{track.author}}</span>
